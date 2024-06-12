@@ -23,6 +23,21 @@
 
 div.content ol li{
   text-align: right;
+  cursor: pointer;
+}
+div.content ol li:hover{
+  border-bottom: 2px solid #906060;
+}
+button{
+  display: block; 
+  width:90%;
+  letter-spacing: 0.3em;
+}
+.quote{
+  color: gray; 
+  font-style: italic;
+  font-size: 0.8em;
+  line-height: 0.2em;
 }
 
 

@@ -1,76 +1,110 @@
 
-//MASONRY LAYOUT
-// number of columns
-let numCols = 3;
+let card; 
+let subArray1,subArray2,subArray3;
+let output1,output2,output3; 
+function init1(){
+  $.ajaxSetup({async: false});
+
+  Newsletter = $.getJSON("FrontPage.json").responseJSON;
+  // console.log("Newsletter ss");
+  // console.log(Newsletter);
 
 
-// for responsiveness, get the the width of the device
-function pageWidth() {  return window.innerWidth != null? window.innerWidth : document.documentElement && document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body != null ? document.body.clientWidth : null; }
+  generateCards();
 
-width = pageWidth()
-console.log(width);
-// Change the number of columns depending on the breakpoint 
-
-if (width < 400) {
-  numCols = 2;
-  // change the variable in numCols 
-}
-console.log(numCols);
-
-
-
-// The masonry container/ parentDiv 
-const masonryCon = document.querySelector('.boxes-con');
-
-// The masonry container elements/ childDivs are assigned to this variable 
-const list = document.querySelectorAll('.boxes')
-
-
-// The number of columns will be used to create HTML div elements that are appended to the masonry container / the boxes will be divided up into the 3 columns that are then added to the mansory container 
-for (var i = 1; i < numCols + 1; i++) {
-  let elem = document.createElement('div');
-  elem.classList.add('sub');
-  elem.classList.add('box' + i);
-  masonryCon.append(elem);
-} // loop 3 times, with loop variable i increasing by 1 every loop. during each loop a div is created, the class sub and box+i is added. the created div is then added to the parent, masonryCon. 
-
-// An array ranging from 0 to number of columns is created
-thearray = [...Array(numCols).keys()];
-
-// An array that would contain the list of main elements would be created
-themainarray = [];
-
-// A variable is defined
-let timesBy;
-
-// The variable is assigned to a number that will determine the length of the mainarray
-if (list.length % numCols == 0) {
-  timesBy = Math.floor(list.length / numCols)
-} else {
-  timesBy = Math.ceil(list.length / numCols)
 }
 
-// The main array will contain would contain positions that the list would be assigned to
-for (var j = 0; j < timesBy; j++) {
-  themainarray.push(...thearray)
+
+//(1)dividing objects in the FrontPage.json into 3 subarrays 
+function createSubarrays(data){
+  var arrays = [];
+  let size = data.length /3 ;
+
+  for (let i = 0; i < data.length; i += size){
+   arrays.push(data.slice(i, i + size));
+    // console.log(arrays);
+  }
+
+  subArray1 = arrays[0];
+  subArray2 = arrays[1];
+  subArray3 = arrays[2];
 }
 
-// The div elements that created based on the number of columns are assigned to variable
-subs = document.querySelectorAll('.sub')
+//(2)generating cards for each subarray onload 
+function generateCards(){ 
+  output1 = document.getElementById("column1");
+  output2 = document.getElementById("column2");
+  output3 = document.getElementById("column3");
+  output1.innerHTML = "";
+  output2.innerHTML = "";
+  output3.innerHTML = "";
+  let text = "";
+  let content = "";
 
-// The elements are assigned to their position based on the number of columns
-for (var b = 0; b < themainarray.length; b++) {
-  subs[themainarray[b]].appendChild(list[b]) //subs[0].appendChild(list[0])
+  createSubarrays(Newsletter);
+  // console.log(subArray1);
+  // console.log(subArray2);
+  // console.log(subArray3);
+  arrays = [];
+  arrays.push(subArray1);
+  arrays.push(subArray2);
+  arrays.push(subArray3);
+
+
+  let outputNum = 0; 
+  for(let i=0; i<arrays.length; i++){
+    //loops 3 times for each subarray 
+    let array = arrays[i]; 
+
+    //Goes through each object in the subarray, creating cards
+    for(let i=0; i<array.length; i++){
+      let Newsletter= array[i];
+      text += `<div class="boxes">`;
+        text += `  <div>`;
+        text += `    <div>`;
+        text += `<img src="${Newsletter.Cover}">`;
+        text += `    </div>`;
+        text += `    <div>`;
+        text += `<p> ${Newsletter.SubTitle}</p>`;
+        text += `<h2> ${Newsletter.Title}</h2>`;
+        text += `<p>${Newsletter.Content}</p>`;
+        text += `<button type="button">Read Newsletter Edition</button>`;
+        text += `    </div>`;
+        text += `  </div>`;
+        text += `</div>`;
+
+      content  = `<div class="boxes">`;
+      content += `<div> <img src="Archived/E${Newsletter.NewsletterNumber}(1).png"> </div>`;
+      content += `<div> <img src="Archived/E${Newsletter.NewsletterNumber}(2).png"> </div>`;
+      content += `</div>`;
+
+      card = new Modal(text,content);
+      if(outputNum == 0){
+         card.render("column1");
+      }
+      else if(outputNum == 1){
+        card.render("column2");
+      }  
+      else if(outputNum == 2){
+        card.render("column3");
+      }
+      text = "";
+      content = "";
+    }
+
+
+    outputNum++; 
+    text = "";
+    content = ""; 
+
+  }
+
+
 }
 
-//Load more function on the TikTalk home page 
-$(function(){
-    $("div").slice(0, 10).show(); // select the first ten
-    $("#load").click(function(e){ // click event for load more
-        e.preventDefault();
-        $("div:hidden").slice(0, 10).show(); // select next 10 hidden divs and show them
-        if($("div:hidden").length == 0){ // check if any hidden divs still exist
-            alert("End of Newsletters"); // alert if there are none left
-        }
-    });
-});
+
+
+
+
+
+

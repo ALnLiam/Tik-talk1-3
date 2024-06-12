@@ -1,5 +1,3 @@
-let $ = (selector)=> document.querySelector(selector);
-
 //Modal
 //Concept Source - https://www.w3schools.com/howto/howto_css_modals.asp
 class Modal{
@@ -25,7 +23,7 @@ class Modal{
 
     this.modal_body = document.createElement("div");
     this.modal_body.setAttribute("class","modal-body");
-    console.log(typeof(this.content) == "object")
+
     if(typeof(this.content) == "object"){
       this.modal_body.append(this.content);
     }else{

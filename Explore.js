@@ -1,88 +1,74 @@
 //https://replit.com/@albertynelim/Lesson81GetDataWithAPURestfulCallDiscussionPD8#script.js  
 function filterByMultipleCategory(){
-  let build = "";
   let ct = 0;
+  let fufilledCategory = [];
 
   //QuerySelectorAll returns all the checked boxes in the form of a nodelist
-  let checkedBoxes = document.querySelectorAll('input[name=inlineCheckbox1]:checked');
+  let checkedBoxes = 
+  document.querySelectorAll('input[name=inlineCheckbox1]:checked');
   console.log(checkedBoxes);
   //Using a for loop, we can go through each individual record of nodelist to retrive the value of the checked boxes
   for (let i = 0; i < checkedBoxes.length; i++) {
     //gets the selected category/value of the checked boxes
     let category= checkedBoxes[i].value; 
-    console.log("The Category");
+    console.log("The Category you checked");
     console.log(category);
-    for(let i=0; i< NewsletterByCategories.length; i++){
-       let NBC = NewsletterByCategories[i];
-       let N = Newsletter[i];
-        if(NBC.CategoryID == category){
-        build += `<div class="card">`;
-        build += `  <h3>${N.Title}</h3>`;
-        build += `  <p>${N.Content}</p>`;
-        build += `  <p class="details"><i>Edition #${N.NewsletterEdition}&nbsp;&nbsp;&nbsp;Week of&nbsp; ${N.PublicationWeek } </i></p>`;
-        build += `</div>`;
-        ct++;
+    for(let i=0; i< NBCANDNewsletter.length; i++){
+       let NBCNA = NBCANDNewsletter[i];
+        if(NBCNA.CategoryID == category){
+           fufilledCategory.push(NBCNA);
+          console.log(NBCNA );
+           ct++;
         }
     }
   }
-    console.log(ct);
-   result.innerHTML = `${ct} Results found.`
-   output.innerHTML = build;
+  console.log(`number found ${fufilledCategory.length}`);
+  generateCards(fufilledCategory);
+  result.innerHTML = `${ct} Results found.`
  }
 
-//NOTE TO SELF: FIND A MORE EFFICIENT WAY
 
-function E12(){
-  if (document.getElementById("CEI1").src != "Archived/E15(1).png"){
-    document.getElementById("CEI1").src = "Archived/E15(1).png";
-    document.getElementById("CEI2").src = "Archived/E15(2).png";
-  } 
-}
-function E13(){
-  if (document.getElementById("CEI1").src != "Archived/E15(1).png"){
-    document.getElementById("CEI1").src = "Archived/E15(1).png";
-    document.getElementById("CEI2").src = "Archived/E15(2).png";
-  } 
-}
-function E14(){
-  if (document.getElementById("CEI1").src != "Archived/E15(1).png"){
-    document.getElementById("CEI1").src = "Archived/E15(1).png";
-    document.getElementById("CEI2").src = "Archived/E15(2).png";
-  } 
-}
-function E15(){
-  if (document.getElementById("CEI1").src != "Archived/E15(1).png"){
-    document.getElementById("CEI1").src = "Archived/E15(1).png";
-    document.getElementById("CEI2").src = "Archived/E15(2).png";
-  } 
-}
-function E16(){
-  if (document.getElementById("CEI1").src != "Archived/E16(1).png"){
-    document.getElementById("CEI1").src = "Archived/E16(1).png";
-    document.getElementById("CEI2").src = "Archived/E16(2).png";
-  } 
-}
-//https://stackoverflow.com/questions/6764961/change-an-image-with-onclick
+//SEARCH FUNCTION
+function filter(){
+  let Title = document.getElementById("Title").value;
+  console.log("Title");
+  console.log(Title);
 
-function Search(){
-  //Newsletter = data
-  output.innerHTML = "";
-  
+  let matchedSearch = []; //create a list of Titles that matched the search
 
-//search the database make a search engine
-  let search = document.getElementById("search").value;
-  let build = "";
-  
-  
-  for(let i=0; i< data.length; i++){
-    let Newsletter= data[i];
-    build += `<div class="card">`;
-    build += `<h3> ${Newsletter.Title}</h3>`;
-    build += `<p> ${Newsletter.Content}</p>`;
-    build += `<p>Edition #${Newsletter.NewsletterEdition}&nbsp;&nbsp; Week of ${Newsletter.PublicationWeek}</p>`;
-    build += `</div>`;
+  for(let i=0; i<Newsletter.length;i++){
+    let N = Newsletter[i]; //get each newsletter
+    //make sure the list is no
+    // if( N.Title == Title ) {
+     if(N.Title.toLowerCase().includes(Title.toLowerCase())){
+          //add to the new list
+          matchedSearch.push(N);
+      
+       }
   }
-  output.innerHTML = build;
+  console.log(`number found ${matchedSearch.length}`)
+  generateCards(matchedSearch);
+
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//switch pages when clicked on 
+function a(EditionNum){
+  document.getElementById("CEI1").src = "Archived/E"+EditionNum+"(1).png";
+  document.getElementById("CEI2").src = "Archived/E"+EditionNum+"(2).png";
+}

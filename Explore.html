@@ -38,8 +38,6 @@
       </li>
       <li><a href="CurrentEdition.html">Current Edition</a></li>
       <li><a href="AboutUs.html">About Us</a></li> 
-
-
     </ul>
   </div>
   <div style="flex:1;"> </div>
@@ -49,33 +47,25 @@
 <section class="FeaturedNewslettersParentDiv"> 
   <div style="flex:1;padding: 20pt;"> 
    <h2 id="newsletter"> Featured Newsletters</h2>
-    <!--KEYWORDS Start-->
     
-
-
-                  
-            <!--    <input type="text" onclick="Search()" value="" placeholder="Enter Keywords.."> -->
-                
+<hr>
     
-    <hr>
-    <button type="button" id="Atrocity" onclick="filterBy1Category(this.id)">Atrocity</button>
-
-
-    <button type="button" id="ArtsAndCulture" onclick="filterBy1Category()">ArtsAndCulture</button>
-    <button type="button" id="BusinessAndFinance" onclick="filterBy1Category()" >BusinessAndFinance</button>
-    <button type="button" id="DomesticAffairs" onclick="filterBy1Category()">DomesticAffairs</button>
-    <button type="button" id="Education" onclick="filterBy1Category()">Education</button>
-    <button type="button" id="Environmental" onclick="filterBy1Category()">Environmental</button>
-    <button type="button" id="GlobalAffairs" onclick="filterBy1Category()">GlobalAffairs</button>
-    <button type="button" id="HealthAndWellbeing" onclick="filterBy1Category()">HealthAndWellbeing</button>
-    <button type="button" id="HumanitarianAidAndDevelopment" onclick="filterBy1Category()">HumanitarianAidAndDevelopment</button>
-    <button type="button" id="LawAndJustice" onclick="filterBy1Category(this.id)">LawAndJustice</button>
-    <button type="button" id="PopCulture" onclick="filterBy1Category(this.id)">PopCulture</button>
-    <button type="button" id="ScienceAndTechnology" onclick="filterBy1Category(this.id)">ScienceAndTechnology</button>
-    <button type="button" id="SongRecommendation"  onclick="filterBy1Category(this.id)">SongRecommendation</button>
-    <button type="button" id="Sports" onclick="filterBy1Category(this.id)">Sports</button> 
-    <!--CATEGORIES-->
-    <div>Categories</div>
+<!--Search Function-->
+  <div>
+    <h4> Search for Newsletter Titles</h4>
+    
+    <input style="text-align:left; display: block; width:90%" type="text" 
+      id="Title" placeholder="Enter keywords for newsletter titles" >     
+    <br>
+      <button type="button" onclick="filter()">Search</button>
+  </div>
+    
+<hr>
+<!--CATEGORIES-->
+  <div>
+  <p> Categories <br>
+  <span class="quote">Newsletter Results may be composed of a combination or simply 1 of the selected values below </span></p>
+  </div>
     <form action="/action_page.php">
       <input type="checkbox" id="category1" name="inlineCheckbox1" value="Atrocity">
       <label for="category1">Atrocity</label><br>
@@ -106,7 +96,7 @@
       <input type="checkbox" id="category14" name="inlineCheckbox1" value="Sports">
       <label for="category14">Sports</label><br><br>
     </form>
-     <a class="button" onclick="filterByMultipleCategory()"> Search </a>
+    <button type="button" onclick="filterByMultipleCategory()">Apply filter</button>
   </div>
  
   <!--RESULTS DIV-->
@@ -128,37 +118,37 @@
       <button type="button" class="collapsible">February 2024</button>
       <div class="content">
         <ol>
-          <li><a href="Explore.html#editions">Edition #1 Week of 2/4-2/10</a></li>
-          <li><a href="Explore.html#editions">Edition #2 Week of 2/11-2/17</a></li>
-          <li><a href="Explore.html#editions">Edition #3 Week of 2/18-2/24</a></li>
-          <li><a href="Explore.html#editions">Edition #4 Week of 2/25-3/2</a></li>
+          <li><p onclick="a(1)">Edition #1 Week of 2/4-2/10</p></li>
+          <li><p onclick="a(2)">Edition #2 Week of 2/11-2/17</p></li>
+          <li><p onclick="a(3)">Edition #3 Week of 2/18-2/24</p></li>
+          <li><p onclick="a(4)">Edition #4 Week of 2/25-3/2</p></li>
         </ol>
       </div> 
       <button type="button" class="collapsible">March 2024</button>
       <div class="content">
         <ol>
-          <li><a href="Explore.html#editions">Edition #5 Week of 3/3-3/9</a></li>
-          <li><a href="Explore.html#editions">Edition #6 Week of 3/10-3/16</a></li>
-          <li><a href="Explore.html#editions">Edition #7 Week of 3/17-3/23</a></li>
-          <li><a href="Explore.html#editions">Edition #8 Week of 3/24-3/30</a></li>
-          <li><a href="Explore.html#editions">Edition #9 Week of 3/31-4/6</a></li>
+          <li><p onclick="a(5)">Edition #5 Week of 3/3-3/9</p></li>
+          <li><p onclick="a(6)">Edition #6 Week of 3/10-3/16</p></li>
+          <li><p onclick="a(7)">Edition #7 Week of 3/17-3/23</p></li>
+          <li><p onclick="a(8)">Edition #8 Week of 3/24-3/30</p></li>
+          <li><p onclick="a(9)">Edition #9 Week of 3/31-4/6</p></li>
         </ol>
       </div>
       <button type="button" class="collapsible">April 2024</button>
       <div class="content">
         <ol>
-          <li><a href="Explore.html#editions">Edition #10 Week of 4/7-4/13</a></li>
-          <li><a href="Explore.html#editions">Edition #11 Week of 4/14-4/20</a></li>
-          <li><a href="Explore.html#editions">Edition #12 Week of 4/21-4/27</a></li>
-          <li><a href="Explore.html#editions">Edition #13 Week of 4/28-5/4</a></li>
+          <li><p onclick="a(10)">Edition #10 Week of 4/7-4/13</p></li>
+          <li><p onclick="a(11)">Edition #11 Week of 4/14-4/20</p></li>
+          <li><p onclick="a(12)">Edition #12 Week of 4/21-4/27</p></li>
+          <li><p onclick="a(13)">Edition #13 Week of 4/28-5/4</p></li>
         </ol>
       </div>
       <button type="button" class="collapsible">May 2024</button>
       <div class="content">
         <ol>
-          <li><a href="Explore.html#editions">Edition #14 Week of 5/5-5/11</a></li>
-          <li><a href="Explore.html#editions"onclick="E15()" >Edition #15 Week of 5/12-5/18</a></li>
-          <li><a href="Explore.html#editions" onclick="E16()" >Edition #16 Week of 5/19-5/25</a></li>
+          <li><p onclick="a(14)">Edition #14 Week of 5/5-5/11</p></li>
+          <li><p onclick="a(15)">Edition #15 Week of 5/12-5/18</p></li>
+          <li><p onclick="a(16)">Edition #16 Week of 5/19-5/25</p></li>
         </ol>
       </div>
 
@@ -190,7 +180,7 @@
   
   
   
-<footer style="display:flex;"> 
+  <footer style="display:flex;"> 
     <div style="flex:1;margin-left:3em"> 
       <div> 
         <h2>TIKTALK
@@ -237,19 +227,18 @@
     <div style="flex:1;"> 
       <h2>Quick Links</h2>
           <ol>
-            <li><a href="default.asp">Home</a></li>
-            <li><a href="news.asp">About Us</a></li>
-            <li><a href="contact.asp">Current Newsletter</a></li>
-            <li><a href="about.asp">Newsletters</a></li>
-             <li><a href="about.asp">Contact Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="CurrentEdition.html">Current Newsletter</a></li>
+            <li><a href="Explore.html">Newsletters</a></li>
           </ol>
     </div>
 
     <div style="flex:1;"> 
-      <h2>Have a question?</h2>
+      <h2>Contact Us</h2>
         <ol>
-          <li><a href="default.asp">InsertInstaHandle</a></li>
-          <li><a href="news.asp">tiktalkieteam@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/tiktalk281/">TikTalk281</a></li>
+          <li><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=tiktalkie@gmail.com">tiktalkieteam@gmail.com</a></li>
         </ol>
     </div>
 
@@ -263,6 +252,7 @@
             
   <script src="script.js"></script>
   <script src="Explore.js"></script>
+
  
   <!--Script js file last, to ensure html loads first, then execute js file-->
 

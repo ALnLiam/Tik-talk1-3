@@ -1,0 +1,137 @@
+[
+  {
+    "NewsletterNumber":"1",
+    "Cover":"https://nebraskaexaminer.com/wp-content/uploads/2024/01/Mayorkas-scaled-1.jpg",
+    "Title":"MAYORKAS IMPEACHMENT",
+    "Content":"This week, Republicans failed to impeach Alejandro N. Mayorkas, the U.S. secretary of homeland security, with a 214 - 216 loss. They argue that he has failed to enforce immigration laws, evidenced by an influx of illegal migrants flooding the U.S. and the insecurity of the southern border.",
+    "SubTitle":"Domestic Affairs / Edition #1",
+    "PublicationWeek":"2/4 - 2/10"
+    },
+
+    {
+    "NewsletterNumber":"2",
+    "Cover":"https://airlinestravel.ro/wp-content/uploads/2022/12/Super-Bowl-LVII-2023.jpg",
+    "Title":"SUPER BOWL LVII",
+    "Content":"Super Bowl LVII mixed football with pop culture. Usher's halftime show dazzled despite glitches, Taylor Swift's return from Tokyo made headlines, and Beyoncé announced a new album in a Verizon ad.  Hollywood studios debuted trailers for highly anticipated films like 'Wicked' and 'Twisters,' alongside the unexpected delight of 'Kung Fu Panda 4.'",
+    "SubTitle":"Pop Culture / Edition #2",
+    "PublicationWeek":"2/11 - 2/17"
+    }, 
+
+  {
+    "NewsletterNumber":"3",
+    "Cover":"https://static01.nyt.com/images/2024/02/25/multimedia/25pol-swiper-speeches-lfcb/25pol-swiper-speeches-lfcb-jumbo.jpg?quality=75&auto=webp",
+    "Title":"SOUTH CAROLINA GOP PRIMARY",
+    "Content":"Last Saturday, Donald Trump won the South Carolina GOP Primary (a primary is an election within a political party to determine the party’s nominee preference), beating former South Carolina governor and U.N. ambassador Nikki Haley. Many believe that Trump has already secured the GOP presidential nomination, casting further doubt on the long-term viability of Haley’s presidential campaign. A rematch between Trump and Biden is increasingly likely.",
+    "SubTitle":"Domestic Affairs / Edition #3",
+    "PublicationWeek":"2/18 - 2/24"
+    }, 
+
+  {
+    "NewsletterNumber":"4",
+    "Cover":"https://th.bing.com/th/id/OIP.wZmwh-YFEn57sWEiiOkETgAAAA?rs=1&pid=ImgDetMain",
+    "Title":"AARON BUSHNELL",
+    "Content":"US air force member Aaron Bushnell, 25, dies outside of the Israeli Embassy in Washington after lighting himself on fire as an act of protest against the ongoing Israeli-Gaza conflict. Mr. Bushnell livestreamed the protest on social media platform Twitch.",
+    "SubTitle":"Domestic Affairs / Edition #4",
+    "PublicationWeek":"2/25 - 3/2"
+    }, 
+
+  {
+    "NewsletterNumber":"5",
+    "Cover":"https://c.ndtvimg.com/2021-03/a4gkh75o_mike-tyson-afp_650x400_23_March_21.jpg",
+    "Title":"MIKE TYSON",
+    "Content":"At age 58, former heavyweight champion Mike Tyson will be getting back in the boxing ring against Jake Paul, the influncer turned boxer. Their match will be streamed live on Netflix on July 20th of this year, in the company’s attempt to push into “sports-adjacent programming,” which has the potential of drawing more people without crazy investments.",
+    "SubTitle":"Domestic Affairs / Edition #5",
+    "PublicationWeek":"3/3 - 3/9"
+    }, 
+
+  {
+    "NewsletterNumber":"6",
+    "Cover":"https://www.ecowatch.com/wp-content/uploads/2021/10/957032135-origin.png",
+    "Title":"FRANCE ON FAST FASHION",
+    "Content":"France's Parliament passed a groundbreaking bill to address fast fashion's environmental impact, targeting ads for cheap textiles and imposing levies on low-cost products. The focus is on promoting transparency and sustainable practices among fashion giants.",
+    "SubTitle":"Domestic Affairs / Edition #6",
+    "PublicationWeek":"3/10 - 3/16"
+    }, 
+
+  {
+    "NewsletterNumber":"7",
+    "Cover":"https://static01.nyt.com/images/2018/05/08/world/08Russia2/08Russia2-videoSixteenByNineJumbo1600.jpg",
+    "Title":"PUTIN",
+    "Content":"Russian President Vladmir Putin won the 2024 Russian presidential election, leading with 87.3% of the vote. Putin may be in office until 2036, and will be the longest-serving President since Joseph Stalin. Putin recently acknowledged Alexei Navalny’s death in an evening address (see Newsletter #3).",
+    "SubTitle":"Global Affairs / Edition #7",
+    "PublicationWeek":"3/17 - 3/23"
+    },
+
+  {
+    "NewsletterNumber":"8",
+    "Cover":"https://topmovierankings.com/wp-content/uploads/2024/02/Quiet-on-set-documentary.jpg",
+    "Title":"DOCUMENTARY",
+    "Content":"The 'Quiet on Set: The Dark Side of Kids TV' documentary gains more traction as events behind the scenes become publicly exposed. The series focuses on prolific TV creator Dan Schneider and his abuse of power, the multiple convicted pedophiles who worked on his hit Nickelodeon shows, and interviews with former child actors, parents, and crew members.",
+    "SubTitle":"Enters / Edition #8",
+    "PublicationWeek":"3/24 - 3/30"
+    },
+
+  {
+    "NewsletterNumber":"9",
+    "Cover":"https://i.abcnewsfe.com/a/a61706b6-e9e0-416b-8bd0-8fde78f2cbf4/heist-1-abc-bb-240404_1712237823771_hpMain_16x9.jpg?w=992",
+    "Title":"$30 MILLION HEIST",
+    "Content":"On Easter Day, Sunday night, one of the largest cash heists in the history of Los Angeles occurred, with a group of thieves stealing as much as $30 million dollars from an L.A. money storage facility - a facility used to store cash from businesses around the region. Baffled, the police and L.A. detectives have not been able to find the burglars yet.",
+    "SubTitle":"Law and Justice / Edition #9",
+    "PublicationWeek":"3/31 - 4/6"
+    },
+
+  {
+    "NewsletterNumber":"10",
+    "Cover":"https://media.newscentermaine.com/assets/WCSH/images/7723f9ec-fab0-4352-8da8-58c25e9e48ec/7723f9ec-fab0-4352-8da8-58c25e9e48ec_1140x641.jpg",
+    "Title":"TOTAL ECLIPSE",
+    "Content":"Today, April 8th, 2024, a total solar eclipse will appear, crossing over Mexico, the U.S., and Canada. This will be the last total solar eclipse in the U.S. until August 2044, 20 years from now. Severe storms and clouds may obscure the sky for eclipse tourists (millions have flocked to the east coast to watch the event), but tourists hope that the weather will cooperate. Wishing everyone a fun eclipse!",
+    "SubTitle":"Environmental / Edition #10",
+    "PublicationWeek":"3/31 - 4/6"
+    },
+
+  {
+    "NewsletterNumber":"11",
+    "Cover":"https://assets3.cbsnewsstatic.com/hub/i/r/2024/03/14/e23ff54a-ad8d-4693-b919-42909a97a992/thumbnail/620x404/a0ea93d9dbe7786324faceaa307f85c6/kim-jong-un-tank-north-korea.jpg?v=e6a7e661b3d1c604b3ae2bec0d66302a",
+    "Title":"NORTH KOREA",
+    "Content":"North Korean leader Kim Jong Un joins troops in training with newly developed battle tanks. In response to ongoing South Korean-U.S. military drills, which North Korea perceives as preparation for invasion, the activities, including the operation of advanced main battle tanks, serve as a direct response.",
+    "SubTitle":"Global Affairs / Edition #11",
+    "PublicationWeek":"3/10 - 3/16"
+    },
+
+  {
+    "NewsletterNumber":"12",
+    "Cover":"https://mydmi.imgix.net/tiktokcard2.jpg?crop=edges&fit=crop&fm=jpg&h=1260&ixlib=php-3.3.0&q=40&w=2400&s=e07eee409ce6b9474f79546e298a6e0c",
+    "Title":"TIKTOK BAN",
+    "Content":"Last week, Biden signed the TikTok Ban bill, which gave ByteDance, its Chinese-based parent company, a deadline of nine months to sell TikTok (and an additional three months if a sale is underway). The app is not currently banned, but will disappear from Apple and Google app stores if a ban is enforced. Lawmakers have raised concerns that China could influence ByteDance to manipulate the content on TikTok. ByteDance has denied all allegations. However, a set of Chinese national security laws, of which ByteDance is subjected to, mandates all its organizations and citizens to aid the Chinese government in efforts to gather intelligence.",
+    "SubTitle":"Law and Justice / Edition #12",
+    "PublicationWeek":"4/21 - 4/27"
+    },
+
+  {
+    "NewsletterNumber":"13",
+    "Cover":"https://assets.vogue.com/photos/66397e33bc8545e6386c752c/master/w_1280%2Cc_limit/2151802247",
+    "Title":"MET GALA 2024",
+    "Content":"The Met Gala, also known as the Costume Institute Benefit, is an annual fundraiser and high-profile fashion event held at the Metropolitan Museum of Art in New York City. This year's event will take place on May 6. The theme for the 2024 Met Gala is 'Sleeping Beauties: Reawakening Fashion,' with a dress code of 'The Garden of Time,' inspired by a 1962 short story by J.G. Ballard. The event will feature celebrity hosts Zendaya, Jennifer Lopez, Bad Bunny, Chris Hemsworth, and Anna Wintour.",
+    "SubTitle":"Enters / Edition #13",
+    "PublicationWeek":"4/28-5/4"
+    },
+
+  {
+    "NewsletterNumber":"14",
+    "Cover":"https://www.bing.com/images/blob?bcid=smU-.Klw0SEHcA",
+    "Title":"RFK JR.",
+    "Content":"Robert F. Kennedy Jr., an independent currently running for president (See Newsletter #13), confirmed that a parasitic worm ate a part of his brain, and subsequently died in his brain. The worm may have caused memory loss and cognitive issues for RFK. His symptoms appeared shortly after a diagnosis of mercury poisoning in 2012. Kennedy, however, has offered to “eat 5 more brain worms and still beat President Trump and President Biden in a debate.”",
+    "SubTitle":"Enters / Edition #14",
+    "PublicationWeek":"5/5 - 5/11"
+    },
+
+  {
+    "NewsletterNumber":"15",
+    "Cover":"https://www.twincities.com/wp-content/uploads/2023/10/Israel_Palestinians_Biden_65421-2.jpg?w=525",
+    "Title":"$1 BILLION ARMS DEAL",
+    "Content":"The Biden-Harris Administration intends on advancing a $1 billion arms sale to Israel. This package includes $60 million in mortar rounds, $500 million in tactical vehicles, and $700 million for tank ammunition. Biden has received backlash of his handling of the war in Gaza from both the left and the right. Members of Biden’s own party have demanded that Biden limit aid to Israel and redirect his attention to Palestinian civilians. Republican lawmakers, however, argue that aid to Israel is imminent.",
+    "SubTitle":"Enters / Edition #15",
+    "PublicationWeek":"5/12 - 5/18"
+    }
+
+]

@@ -18,13 +18,18 @@ html {
 
 
 
-/* MASONRY LAYOUT */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+/*MANSORY LAYOUT*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* This styling applies after the javascript */
 .boxes-con{ /*This is the parent div*/
   border-top: 0.7px solid black;
   display: flex;
@@ -32,7 +37,13 @@ html {
   padding: 10px;
   margin-left: 70pt;
   margin-right: 70pt;
+  /*  flex-wrap: wrap;*/
 }
+.column{
+  flex:1;
+  margin: 0.5em;
+}
+
 .boxes {
   margin: 10px auto;
   width: 100%;
@@ -41,24 +52,10 @@ html {
  /* height: 10rem; */
   background: #c3d4e5;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  transition: all 200ms ease-in-out;
 }
-.box2 .boxes:nth-child(2n) {
-  /* browser assigns pre-existing classes, pesudo, pretend classes, class:nth-child(2), selects the second child in the element, class, in the parent class, box2*/
-  width: 100%;
-  /*height: 15rem;*/
-  background: #ac8b8f;
-}
-.box1 .boxes:nth-child(odd) {
-  /* index of first child is 1, all the odd children with the class boxes in the parent class box1 are orange for ex */
-  background: #ff9494;
- /* height: 14rem;*/
-  width: 100%;
-}
-.box3 .boxes:nth-child(odd) {
-  /* all the odd children with the class .boxes in the parent class box3 are violet */
-background: #8885b7;
-  /*height: 17rem;*/
-  width: 100%;
+.boxes:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .boxes div{
   margin: auto;
@@ -73,27 +70,26 @@ background: #8885b7;
    height:auto;
 }
 
-.sub {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 1px 10px;
+
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
 }
 
-#load {
-  background-color: #2b2c2a;
-  color: #ffffff;
-  padding: 15px 32px;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  display:flex;
-  max-width: 12%;
-
-  margin: auto;
-  width: 50%;/*centers the button*/
-
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
+
 
 .NCSection{
   border-top: 0.7px solid black;

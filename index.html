@@ -7,13 +7,14 @@
     <title>replit</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="index.css" rel="stylesheet" type="text/css" />
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="components.css" rel="stylesheet" type="text/css" />
-    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+     <script src="components.js"></script> 
+
   </head>
   
 
-<body>
+<body onload="init1()">
  
 <section class="TTHeader"> 
     <span>
@@ -42,225 +43,14 @@
 <br> 
 
 
-<!--MASONRY LAYOUT-->
-<!--(1) JS is used to obtain parent container (2) JS is used to create div elements for x columns needed (3) pre-existing div elements are divided throughout columns to generate masonry or pinterest layout --> 
-  <div class="boxes-con">
-    
-    <div class="boxes" name="1">
-      <div>
-       <div> <img src=homePageBoxes/E16.jpg></div> 
-        <div>
-          <p>Pop Culture / Edition #16</p>
-          <h2>Tom Cotton</h2>
-          <p>Arkansas Senator Tom Cotton has become Trump’s top VP contender. Trump favors Cotton’s Harvard education, military service, and strong cable news performances. Other contenders are Doug Burgum, Marco Rubio...</p>
-          <button>See Newsletter</button>
-        </div>
-      </div>
-    </div>
-    
-    <div class="boxes" name="2">
-      <div>
-       <div> <img src=homePageBoxes/E15.jpg></div> 
-        <div>
-          <p>Global Affairs / Edition #15</p>
-          <h2>$1 Billion Arms Deal</h2>
-          <p>The Biden-Harris Administration intends on advancing a $1 billion arms sale to Israel. This package includes $60 million in mortar rounds, $500 million in tactical..</p>
-          <button>See Newsletter</button>
-        </div>
-        
-      </div>
-    </div>
-    
-    <div class="boxes" name="3">
-        <div>
-         <div> <img src=homePageBoxes/E14.jpg></div> 
-          <div>
-            <p>Domestic Affairs / Edition #14</p>
-            <h2>RFK JR.</h2>
-            <p>Robert F. Kennedy Jr., an independent currently running for president (See Newsletter #13), confirmed that a parasitic worm ate a part of his brain, and subsequently died in his brain. The worm may have caused memory loss...”</p>
-            <button>See Newsletter</button>
-          </div>
-        </div>
-    </div>
-    
-    <div class="boxes" name="4">
-      <div>
-       <div> <img src=homePageBoxes/E13.jpg></div> 
-        <div>
-          <p>Arts and Culture / Edition #13</p>
-          <h2>MET GALA 2024</h2>
-          <p>The Met Gala, also known as the Costume Institute Benefit, is an annual fundraiser and high-profile fashion event held at the Metropolitan Museum of Art in New York City. This year's event will take place on May 6. The theme for the 2024 Met Gala is "Sleeping Beauties..</p>
-          <button>See Newsletter</button>
-        </div>
-      </div>
-    </div>
 
-    <div class="boxes" name="5">
-      <div>
-       <div> <img src=homePageBoxes/E12.jpg></div> 
-        <div>
-          <p>Domestic Affairs / Edition #12</p>
-          <h2>TiKTOK BAN</h2>
-          <p>Last week, Biden signed the TikTok Ban bill, which gave ByteDance, its Chinese-based parent company, a deadline of nine months to sell TikTok (and an additional three months if a sale is underway). The app is not currently banned...</p>
-          <button>See Newsletter</button>
-        </div>
-      </div>
-    </div>
-    
-    <div class="boxes" name="6">
-        <div>
-         <div> <img src=homePageBoxes/E11.jpg></div> 
-          <div>
-            <p>Global Affairs / Edition #11</p>
-            <h2>NORTH KOREA</h2>
-            <p>North Korea claims to have launched a "super-large" cruise missile warhead and a new anti-aircraft missile in a western coastal area, as it strengthens its military capabilities in the face of rising tensions with the United States and South Korea...</p>
-            <button>See Newsletter</button>
-          </div>
-        </div>
-    </div>
-    
-    <div class="boxes" name="7">
-        <div>
-         <div> <img src=homePageBoxes/E10.jpg></div> 
-          <div>
-            <p>Global Affairs / Edition #10</p>
-            <h2>TOTAL ECLIPSE</h2>
-            <p>Last Sunday, a total eclipse, when the moon blocks the sun entirely, occurred from coast-to-coast in the U.S. From Texas to Maine...</p>
-            <button>See Newsletter</button>
-          </div>
-        </div>
-    </div>
-    
-    <div class="boxes" name="8" style="display:none;" >
-      <div>
-       <div> <img src=homePageBoxes/E9.jpg></div> 
-        <div>
-          <p>Global Affairs / Edition #9</p>
-          <h2>$30 million heist</h2>
-          <p>On Easter Day, Sunday night, one of the largest cash heists in the history of Los Angeles occurred, with a group of thieves stealing as much as $30 million dollars from an L.A...</p>
-          <button>See Newsletter</button>
-        </div>
-      </div>
-    </div>
-    
-    <div class="boxes" name="9">
-      <div>
-       <div> <img src=homePageBoxes/E8.jpg></div> 
-        <div>
-          <p>Global Affairs / Edition #8</p>
-          <h2>Documentary</h2>
-          <p>The "Quiet on Set: The Dark Side of Kids TV" documentary gains more traction as events behind the scenes become publicly exposed. The series focuses on prolific TV creator Dan Schneider and his abuse of power...</p>
-          <button>See Newsletter</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="boxes" name="10">
-      <div>
-       <div> <img src=homePageBoxes/E7.jpg></div> 
-        <div>
-          <p>Global Affairs / Edition #7</p>
-          <h2>PUTIN</h2>
-          <p>Russian President Vladmir Putin won the 2024 Russian presidential election, leading with 87.3% of the vote. Putin may be in office until 2036, and will be the longest-serving President since Joseph Stalin...</p>
-          <button>See Newsletter</button>
-        </div>
-      </div>
-    </div>
-    <div class="boxes" name="11" style="display:none;">
-      <div>
-       <div> <img src=homePageBoxes/E6.jpg></div> 
-        <div>
-          <p>Global Affairs / Edition #6</p>
-          <h2>FRANCE ON FAST FASHION</h2>
-          <p>France's Parliament passed a groundbreaking bill to address fast fashion's environmental impact, targeting ads for cheap textiles and imposing levies on low-cost products. The focus is on promoting transparency and sustainable practices among fashion giants.</p>
-          <button>See Newsletter</button>
-        </div>
-      </div>
-    </div>
-    
-
-
-    <div class="boxes" name="12" style="display:none;">
-      <div>
-       <div> <img src=homePageBoxes/E5.jpg></div> 
-        <div>
-          <p>Global Affairs / Edition #5</p>
-          <h2>MIKE TYSON</h2>
-          <p>At age 58, former heavyweight champion Mike Tyson will be getting back in the boxing ring against Jake Paul, the influncer turned boxer. Their match will be streamed live on Netflix on July 20th of this year...</p>
-          <button>See Newsletter</button>
-        </div>
-      </div>
-    </div>
-    
-    <div class="boxes" name= "13" style="display:none;">
-      <div>
-       <div> <img src=homePageBoxes/E4.jpg></div> 
-        <div>
-          <p>Global Affairs / Edition #4</p>
-          <h2>AARON BUSHNELL</h2>
-          <p>US air force member Aaron Bushnell, 25, dies outside of the Israeli Embassy in Washington after lighting himself on fire as an act of protest against the ongoing Israeli-Gaza conflict. Mr. Bushnell livestreamed...</p>
-          <button>See Newsletter</button>
-        </div>
-      </div>
-    </div>
-    
-    <div class="boxes" name="14" style="display:none;">
-      <div>
-       <div> <img src=homePageBoxes/E3.jpg></div> 
-        <div>
-          <p>Global Affairs / Edition #3</p>
-          <h2>South Carolina gop primary</h2>
-          <p>Last Saturday, Donald Trump won the South Carolina GOP Primary (a primary is an election within a political party to determine the party’s nominee preference), beating former South Carolina governor and U.N. ambassador Nikki...</p>
-          <button>See Newsletter</button>
-        </div>
-      </div>
-    </div>
-    
-    <div class="boxes" name="15" style="display:none;">
-      <div>
-       <div> <img src=homePageBoxes/E2.jpg></div> 
-        <div>
-          <p>Pop Culture / Edition #2</p>
-          <h2>SUPER BOWL LVII</h2>
-          <p>Super Bowl LVII mixed football with pop culture. Usher's halftime show dazzled despite glitches, Taylor Swift's return from Tokyo made headlines, and Beyoncé announced a new album in a Verizon ad.  Hollywood studios debuted...</p>
-          <button>See Newsletter</button>
-        </div>
-      </div>
-    </div>
-    
-    <div class="boxes" name="16" style="display:none;">
-      <div>
-       <div> <img src=homePageBoxes/E1.jpg></div> 
-        <div>
-          <p>Pop Culture / Edition #1</p>
-          <h2>MAYORKAS IMPEACHMENT</h2>
-          <p>This week, Republicans failed to impeach Alejandro N. Mayorkas, the U.S. secretary of homeland security, with a 214 - 216 loss. They argue that he has failed to enforce immigration laws...</p>
-          <button>See Newsletter</button>
-        </div>
-      </div>
-    </div>
-    
-    <div class="boxes" name="17" style="display:none;">
-      <div>
-       <div> <img src=homePageBoxes/E1.jpg></div> 
-        <div>
-          <p>Pop Culture / Edition #1</p>
-          <h2>MAYORKAS IMPEACHMENT</h2>
-          <p>This week, Republicans failed to impeach Alejandro N. Mayorkas, the U.S. secretary of homeland security, with a 214 - 216 loss. They argue that he has failed to enforce immigration laws...</p>
-          <button>See Newsletter</button>
-        </div>
-      </div>
-    </div>
-    
-    <div class="boxes" style="display:none;">
-      <div>18</div>
-    </div>
+  <!--MANSORY LAYOUT-->
+  <div class="boxes-con" id="row">
+    <div class="column" id="column1">  </div>
+    <div class="column" id="column2">  </div>
+    <div class="column" id="column3">  </div>
   </div>
-<!--HTML displays container boxes-con, with x individual boxes in   -->  
-
-  <div type="button" id="load"> 
-      Load more 
-  </div>
+  
 
   <section class="centered NCSection"> 
   <h1 class="centered NCH1"> Newsletter Categories </h1>
@@ -333,35 +123,27 @@
     <div style="flex:1;"> 
       <h2>Quick Links</h2>
           <ol>
-            <li><a href="default.asp">Home</a></li>
-            <li><a href="news.asp">About Us</a></li>
-            <li><a href="contact.asp">Current Newsletter</a></li>
-            <li><a href="about.asp">Newsletters</a></li>
-             <li><a href="about.asp">Contact Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="CurrentEdition.html">Current Newsletter</a></li>
+            <li><a href="Explore.html">Newsletters</a></li>
           </ol>
     </div>
 
     <div style="flex:1;"> 
-      <h2>Have a question?</h2>
+      <h2>Contact Us</h2>
         <ol>
-          <li><a href="default.asp">InsertInstaHandle</a></li>
-          <li><a href="news.asp">tiktalkieteam@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/tiktalk281/">TikTalk281</a></li>
+          <li><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=tiktalkie@gmail.com">tiktalkieteam@gmail.com</a></li>
         </ol>
     </div>
 
   </footer>
 
 
-
-
-
-
   
   <script src="script.js"></script>
   <script src="index.js"></script>
-  <!--<script src="components.js"></script>-->
-
-  
 </body>
 
 </html>
