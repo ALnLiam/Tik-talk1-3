@@ -10,7 +10,7 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<body>
+<body onload="GenerateFooterLatestNewsletterSection()">
 <section class="TTSubPagesHeader"> 
     <span>
       <p> 
@@ -117,9 +117,9 @@
   
   
   
-<!--FOOTER--> 
+  <!--FOOTER--> 
   <footer style="display:flex;"> 
-    <div style="flex:1;margin-left:3em"> 
+    <div id="footerColumn1"> 
       <div> 
         <h2>TIKTALK
             <img style="height: 0.9em;" src="tikTalkLogo.png"> 
@@ -129,32 +129,30 @@
       </div> 
     </div>
 
-    <div style="  flex-direction: column;max-width: 30%;"> 
+    <div id="footerColumn2"> 
       <h2>Latest Newsletters</h2>
           <section> 
             <!--Latest Newseltter div #1-->
             <div class="LatestNewsletterParentDiv"> 
             <a href="#"> 
-            <div style="display:block;"> 
-                <img class="LNImg" src="FooterImg/FooterImg1.jpg">
+            <div style="display:block;" id="LNimg0"> 
             </div>
             </a>
               <a href="#">
-                <div class="LNRightChildDiv">  
-                  <span style="font-size: 14pt;">Newsletter Edition 10</span><br> President Biden and former President Trump have agreed to debate each other on June 27th... 
+                <div class="LNRightChildDiv" id="LNRCD0">
+
                 </div>
               </a>
             </div>
             <!--Latest Newseltter div #2-->
             <div class="LatestNewsletterParentDiv"> 
               <a href="#"> 
-              <div style="display:block;"> 
-                  <img class="LNImg" src="FooterImg/FooterImg1.jpg">
+              <div style="display:block;" id="LNimg1"> 
               </div>
               </a>
               <a href="#">
-                <div class="LNRightChildDiv">  
-                  <span style="font-size: 14pt;">Newsletter Edition 10</span><br> President Biden and former President Trump have agreed to debate each other on June 27th... 
+                <div class="LNRightChildDiv" id="LNRCD1">  
+
                 </div>
               </a>
               </div>
@@ -162,17 +160,17 @@
           </section>
     </div>
 
-    <div style="flex:1;"> 
+    <div id="footerColumn3"> 
       <h2>Quick Links</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="Explore.html">Explore</a></li>
             <li><a href="CurrentEdition.html">Current Newsletter</a></li>
-            <li><a href="Explore.html">Newsletters</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
           </ol>
     </div>
 
-    <div style="flex:1;"> 
+    <div id="footerColumn4"> 
       <h2>Contact Us</h2>
         <ol>
           <li><a href="https://www.instagram.com/tiktalk281/">Instagram: TikTalk281</a></li>

@@ -3,39 +3,6 @@
 //Google Sheets
 //https://docs.google.com/spreadsheets/d/1teDHDRE2dwY-jqkVN3L25OqjEyJ1omibL2xPqqe-87A/edit#gid=1198749199
 
-let data, output, result;
-let NewsletterByCategories,Newsletter,NBCANDNewsletter;
-function init(){
-  $.ajaxSetup({async: false});
-
-  Newsletter = $.getJSON("Newsletter.json").responseJSON;
-  console.log(Newsletter);
-  NBCANDNewsletter = $.getJSON("NBCANDNewsletter.json").responseJSON;
-  NewsletterByCategories = $.getJSON("NBCANDNewsletter.json").responseJSON;
-   console.log(NewsletterByCategories);
-
-  output = document.getElementById("output");
-  result = document.getElementById("result");
-
-  generateCards(Newsletter);
-
-}
-
-//COLLAPSIBLES
-var coll = document.getElementsByClassName("collapsible");
-var i;
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-
 //Newsletter = data (default)
 function generateCards(data){
   output.innerHTML = "";
@@ -54,6 +21,41 @@ function generateCards(data){
   result.innerHTML = `${ct} Results found.`
   output.innerHTML = build;
 }
+
+
+
+function footerLatestNewsletterSection(OutputdivID,zeroOrOne,LNimg0){
+ //Auto-generate description from first item of array into card
+  output1 = document.getElementById(OutputdivID);
+  output1.innerHTML = "";
+  let sectionOfContent = ""; 
+  //taking the first 83 words from content -> Limiting word count
+  for(let i = 0; i<84; i++){
+    sectionOfContent += Newsletter[zeroOrOne].Content[i];
+  }
+  let build = ""; 
+  build += `<span style="font-size: 14pt;">Newsletter Edition #${Newsletter[zeroOrOne].NewsletterNumber}</span><br>${sectionOfContent}...`;
+  output1.innerHTML = build;
+
+  
+  //generate pic with description 
+  output2 = document.getElementById(LNimg0);
+  output2.innerHTML = "";
+  let construct = `<img class="LNImg" src="${Newsletter[zeroOrOne].Cover}">`;
+  output2.innerHTML = construct;
+ 
+}
+
+
+function GenerateFooterLatestNewsletterSection(){
+   $.ajaxSetup({async: false});
+   let NewsletterUnreversed = $.getJSON("FrontPage.json").responseJSON;
+   Newsletter = NewsletterUnreversed.reverse();
+  footerLatestNewsletterSection("LNRCD0",0,"LNimg0");
+  footerLatestNewsletterSection("LNRCD1",1,"LNimg1");
+}
+
+
 
 
 

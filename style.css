@@ -13,9 +13,10 @@ a{
 .TTSubPagesHeader{
   background: #efebeb;
   padding: 8px 15px 3px;
+  padding-left: 1.5em;
   position: relative;
   text-align: left;
-
+  box-shadow: 0px 2px 5px #888888;
 }
 ol{
 padding:0pt
@@ -30,17 +31,19 @@ ul {
   width: 100%;
   list-style: none;
   text-align: center;
+  
 }
 li{
   display: table-cell;
   text-align: center;
-  
+ 
 }
 li a{
   display: block;
   text-decoration: none;
   color: black;
   border-bottom: 2px solid transparent;
+  margin-left: 1em;
 }
 
 /*EXPLORE nav bar styling*/
@@ -84,21 +87,55 @@ footer{
   width: 100%;
   text-align: left;
   display: flex;
+  flex-direction:column;
+  /*flex-flow: row wrap;*/
   flex-flow: row wrap;
   padding: 50px;
   color: #191a19;
   background-color: #f1f8f8;
   border-top: 1px solid #373434;
+
 }
+#footerColumn1{
+  flex:1;
+  margin-left:3em;
+}
+#footerColumn2{
+  flex-direction:column;
+  margin-top: auto;
+  max-width: 30%;
+  margin-bottom: 1em;
+}
+#footerColumn3{
+  flex:1;
+  margin-bottom: 1em;
+}
+#footerColumn4{
+  flex:1;
+}
+
+
+
 .LatestNewsletterParentDiv{
-  display:flex;flex-direction:row;
-  margin: 10pt;
+  display:flex;
+  flex-direction:row;
+  margin-bottom: 10px;
+  margin-right: 2em;
+  background-color: #eaf2f6;
+  border-radius: 5px;
+  padding-left: 0.3em;
+  border: 1px solid #d2d1d1;
+  
 }
 .LNRightChildDiv{
-flex:1;display:block;
+  flex:1;
+  display:block;
   padding-left: 15pt;
+  text-decoration: none;
+  color: black;
 }
 .LNImg{
+  margin-top: 0.5em;
   height:4.5rem;
   border-radius: 3pt;
 }
@@ -112,6 +149,24 @@ ol li{
 }
 
 
+/*For RESPONSIVENESS*/
+@media screen and (max-width: 800px) {
+  
+  footer{
+    flex-direction:row;
+    text-align: center;
+    padding: 15pt;
+  }
+  #footerColumn1{
+    margin-left:0em;
+  }
+  #footerColumn2{
+    flex-direction:column;
+    max-width: 100%;
+    margin-top: 1em;
+  }
+
+}
 
 
 

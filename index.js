@@ -5,31 +5,41 @@ let output1,output2,output3;
 function init1(){
   $.ajaxSetup({async: false});
 
-  Newsletter = $.getJSON("FrontPage.json").responseJSON;
-  // console.log("Newsletter ss");
-  // console.log(Newsletter);
-
-
+  let NewsletterUnreversed = $.getJSON("FrontPage.json").responseJSON;
+  Newsletter = NewsletterUnreversed.reverse(); 
   generateCards();
 
+  footerLatestNewsletterSection("LNRCD0",0,"LNimg0");
+  footerLatestNewsletterSection("LNRCD1",1,"LNimg1");
+
+  
+  
 }
 
-
+//Generating Cards for Mansory Layout 
 //(1)dividing objects in the FrontPage.json into 3 subarrays 
 function createSubarrays(data){
   var arrays = [];
-  let size = data.length /3 ;
-
+  let numOfSubArrays = 3; 
+  
+  //if window width is less than or equal to 800 px, then allow 2 colums 
+  if(window.innerWidth <= 600){
+    numOfSubArrays = 1
+  }else if(window.innerWidth <= 800){
+    numOfSubArrays = 2
+  }
+  //size = size of each array
+  let size = data.length /numOfSubArrays ;
   for (let i = 0; i < data.length; i += size){
    arrays.push(data.slice(i, i + size));
     // console.log(arrays);
   }
-
   subArray1 = arrays[0];
   subArray2 = arrays[1];
   subArray3 = arrays[2];
 }
 
+console.log(window.innerWidth);
 //(2)generating cards for each subarray onload 
 function generateCards(){ 
   output1 = document.getElementById("column1");
@@ -42,13 +52,19 @@ function generateCards(){
   let content = "";
 
   createSubarrays(Newsletter);
-  // console.log(subArray1);
-  // console.log(subArray2);
-  // console.log(subArray3);
   arrays = [];
-  arrays.push(subArray1);
-  arrays.push(subArray2);
-  arrays.push(subArray3);
+  //For a responsive website: # of columns depending on window   browser width 
+  //if window width is greater than or equal to 800 px, then push subArray3 to generate cards into 
+  if(window.innerWidth >= 800){
+    arrays.push(subArray1);
+    arrays.push(subArray2);
+    arrays.push(subArray3);
+  }else if(window.innerWidth >= 600){ //if less than 800 -> 2 columns
+    arrays.push(subArray1);
+    arrays.push(subArray2);
+  }else if(window.innerWidth <= 600){ //if less than 600 -> 1 column
+    arrays.push(subArray1);
+  }
 
 
   let outputNum = 0; 
@@ -73,10 +89,11 @@ function generateCards(){
         text += `  </div>`;
         text += `</div>`;
 
-      content  = `<div class="boxes">`;
+      content  = `<div class="boxes" id="content">`;
       content += `<div> <img src="Archived/E${Newsletter.NewsletterNumber}(1).png"> </div>`;
       content += `<div> <img src="Archived/E${Newsletter.NewsletterNumber}(2).png"> </div>`;
       content += `</div>`;
+      //content += `<button onclick="goToTop()" id="GoToTopbtn" title="Go to top">Top</button> `; 
 
       card = new Modal(text,content);
       if(outputNum == 0){
@@ -96,12 +113,9 @@ function generateCards(){
     outputNum++; 
     text = "";
     content = ""; 
-
   }
 
-
 }
-
 
 
 

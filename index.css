@@ -9,19 +9,13 @@ html {
   padding: 8px 15px 3px;
   position: relative;
   text-align: center;
+  box-shadow: 0px 2px 5px #888888;
 }
 .h1{
   font-size: 40pt;
   font-weight: bolder;
 }
 
-
-
-
-html {
-  height: 100%;
-  width: 100%;
-}
 
 
 /*MANSORY LAYOUT*/
@@ -42,6 +36,12 @@ html {
 .column{
   flex:1;
   margin: 0.5em;
+}
+#column2{
+  display:block;
+}
+#column3{
+  display:block;
 }
 
 .boxes {
@@ -70,31 +70,9 @@ html {
    height:auto;
 }
 
-
-
-
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-
-
 .NCSection{
   border-top: 0.7px solid black;
-
-  margin: 40pt 50pt 70pt 70pt;
+  margin: 40pt 50pt 4em 4em;
 }
 .NCH1{
   margin-top: 40pt;
@@ -105,6 +83,43 @@ button{
   margin: 5pt;
   font-size: 10pt;
 }
+
+#Atrocity, button ~ button{
+  background-color:transparent;
+  border-style: none;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .boxes-con{
+    margin-left: 5pt;
+    margin-right: 5pt;
+  }
+  #column3{
+    display:none;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  #column2{
+    display:none;
+  }
+  #column3{
+    display:none;
+  }
+}
+
+
 
 
 
